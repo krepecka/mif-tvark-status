@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  //- h1= title
+  //- p Welcome to #{title}
+
+  if isDown == true 
+    h1 MIF timetables are 
+      span(style="color:red;") DOWN
+  else
+    h1 MIF timetables are 
+      span(style="color:green;") WORKING
+
+  p Last checks: 
+    br
+    for timeChecked in lastChecks
+      p #{timeChecked}
+    
